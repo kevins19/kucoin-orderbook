@@ -55,8 +55,10 @@ impl Orderbook {
         println!("-------------------------------------------------");
         println!("{:<10} | {:<10} | {:<10} | {:<10}", "Bid Price", "Bid Qty", "Ask Price", "Ask Qty");
         println!("{:-<10}-+-{:-<10}-+-{:-<10}-+-{:-<10}", "", "", "", ""); 
-        let mut bid_iter = self.bids.iter().rev();  
-        let mut ask_iter = self.asks.iter();        
+        let mut bid_iter = self.bids.iter().rev();
+        let mut ask_iter = self.asks.iter();
+        
+        // print up to 10 lines for greater readability      
         for _ in 0..10 {
             let bid = bid_iter.next();
             let ask = ask_iter.next();
