@@ -29,7 +29,7 @@ impl Orderbook {
         }
     }
 
-    /// Processes a market incremental and uses it to updat ethe state
+    /// Processes a market incremental and uses it to update the state
     pub fn process(&mut self, inc: &Incremental) {
         match inc.direction {
             Direction::Buy => {
